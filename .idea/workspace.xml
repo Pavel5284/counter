@@ -29,7 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../it-incubator-todolist-ts-01 repeat" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -58,7 +58,9 @@
       <workItem from="1651661173666" duration="5459000" />
       <workItem from="1651785053894" duration="212000" />
       <workItem from="1651954544781" duration="73000" />
-      <workItem from="1652030844636" duration="3748000" />
+      <workItem from="1652030844636" duration="4542000" />
+      <workItem from="1652047658413" duration="70000" />
+      <workItem from="1654171770574" duration="3852000" />
     </task>
     <servers />
   </component>
@@ -78,9 +80,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1651954617789">
+    <state x="828" y="157" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1654174594662">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1651954617789" />
+    <state x="828" y="157" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1654174594662" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1654183585369">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1654183585369" />
   </component>
 </project>

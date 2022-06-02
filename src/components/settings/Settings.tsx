@@ -1,6 +1,6 @@
-import {StatusType} from "../../App";
 import s from './Settings.module.css';
 import {ChangeEvent} from "react";
+import {StatusType} from "../../state/settingsReducer";
 
 export type ScorebooardPropsType = {
     startValue: number

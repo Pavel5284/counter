@@ -1,5 +1,6 @@
-import {StatusType} from "../../App";
+
 import s from './Scoreboard.module.css';
+import {StatusType} from "../../state/settingsReducer";
 
 type ScoreboardType = {
     count: number

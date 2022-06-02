@@ -2,27 +2,41 @@ import React, {ChangeEvent, useEffect, useState} from 'react';
 import s from './Counter.module.css'
 import {Settings} from "./components/settings/Settings";
 import {Scoreboard} from "./components/scoreboard/Scoreboard";
+import {useDispatch, useSelector} from "react-redux";
+import {AppStateType} from "./state/store";
+import {setMaxValueAC, setStartValueAC, setStatusAC, StatusType} from "./state/settingsReducer";
+import {setCountAC} from "./state/scoreboardReducer";
 
-export type StatusType = 'counter' | 'set' | 'error'
+
 
 export const App = () => {
-    const [startValue, setStartValue] = useState<number>(0)
-    const [maxValue, setMaxValue] = useState<number>(5)
-    const [count, setCount] = useState<number>(startValue)
-    const [status, setStatus] = useState<StatusType>('counter')
+
+   const startValue = useSelector<AppStateType, number>(state => state.settings.startValue)
+    const dispatch = useDispatch()
+
+    const setStartValue = (value: number) => {
+       dispatch(setStartValueAC(value))
+    }
+
+    const maxValue = useSelector<AppStateType, number>(state => state.settings.maxValue)
+    const setMaxValue = (value: number) => {
+       dispatch(setMaxValueAC(value))
+    }
+    const count = useSelector<AppStateType, number>(state => state.scoreboard.count)
+    const setCount = (value:number) => {
+       dispatch(setCountAC(value))
+    }
+    const status = useSelector<AppStateType, StatusType>( state => state.settings.status)
+    const setStatus = (value: StatusType) => {
+       dispatch(setStatusAC(value))
+    }
+
+   // const [startValue, setStartValue] = useState<number>(0)
+   // const [maxValue, setMaxValue] = useState<number>(5)
+    //const [count, setCount] = useState<number>(startValue)
+    //const [status, setStatus] = useState<StatusType>('counter')
 
 
-
- /*   useEffect(() => {
-        localStorage.setItem('startValue', JSON.stringify(startValue))
-    }, [startValue])
-
-    useEffect(() => {
-        localStorage.setItem('maxValue', JSON.stringify(maxValue))
-    }, [maxValue])
-    useEffect(() => {
-        localStorage.setItem('count', JSON.stringify(count))
-    }, [count])*/
 
     useEffect(() => {
         let startValueAsString = localStorage.getItem('startValue')
@@ -41,40 +55,6 @@ export const App = () => {
             setCount(newValue)
         }
     }, [])
-
-    /*const setHandler = () => {
-        if (maxValue <= startValue) {
-            setError(true)
-            setDisabled(true)
-            setText(`Incorrect value!`)
-        } else {
-            setError(false)
-            setDisabled(false)
-            setCount(startValue)
-        }
-        localStorage.setItem('startValue', JSON.stringify(startValue))
-        localStorage.setItem('maxValue', JSON.stringify(maxValue))
-        setCount(startValue)
-    }*/
-
-/*
-    const incHandler = () => {
-        if (count < maxValue) {
-            setCount(state => state && state + 1)
-        }
-    }
-
-    const resetHandler = () => {
-        setCount(startValue)
-    }
-*/
-
-
-
-/*    const incDisabled = count === maxValue || count === null
-    const resetDisabled = count === startValue || count === null
-
-    const scoreboardClassname = count === maxValue ? `${s.counterBoard} ${s.red}` : `${s.counterBoard}` && count === null ? `${s.counterBoard} ${s.textSize}` : `${s.counterBoard}`*/
 
 
 
